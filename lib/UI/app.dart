@@ -6,9 +6,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Preguntas")
-      ),
+      appBar: AppBar(title: Text("Preguntas")),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -21,32 +19,48 @@ class App extends StatelessWidget {
             ),
             ListTile(
               title: Text('item 1'),
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
             ),
             ListTile(
               title: Text('item 2'),
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
             )
           ],
-
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Text("Primera"),
-          Preguntas()
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            Preguntas()
+          
+          ],
+        ),
       ),
     );
   }
 
-  Preguntas(){
-    return Card(
-      child: Text('Hola'),
+
+  Preguntas() {
+    return ListView(
+      children: <Widget>[
+        Card(
+          
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Text("data")
+              ],
+            ),
+          ),
+          
+        ),
+      ],
     );
   }
 }
