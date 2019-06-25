@@ -10,7 +10,30 @@ class App extends StatelessWidget {
         title: Text("Preguntas")
       ),
       drawer: Drawer(
-        
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Preguntas Mil'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('item 1'),
+              onTap: (){
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('item 2'),
+              onTap: (){
+                Navigator.pop(context);
+              },
+            )
+          ],
+
+        ),
       ),
       body: Column(
         children: <Widget>[
